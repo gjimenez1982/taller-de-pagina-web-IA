@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odontología Especializada</title>
+
+  <!-- Estilos CSS -->
+  <style>
+    /* Estilo general del sitio */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* Cabecera */
+    header {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    /* Botón para móviles */
+    .menu-toggle {
+      display: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Menú de navegación */
+    nav {
+      background-color: #007BFF;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      border-radius: 5px;
+    }
+
+    .menu-items {
+      display: flex;
+    }
+
+    /* Sección principal */
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    main img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    main h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+
+      .menu-items {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+      }
+
+      .menu-items.active {
+        display: flex;
+      }
+
+      nav a {
+        border-top: 1px solid #ffffff55;
+      }
+    }
+  </style>
+
+  <!-- JavaScript para menú desplegable -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuItems');
+      const toggleBtn = document.querySelector('.menu-toggle');
+      menu.classList.toggle('active');
+      const expanded = menu.classList.contains('active');
+      toggleBtn.setAttribute('aria-expanded', expanded);
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    Odontología Especializada
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="menuItems">Menú</button>
+    <div class="menu-items" id="menuItems">
+      <a href="#">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Tratamientos</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Sección principal -->
+  <main>
+    <!-- Imagen generada con IA -->
+    <img src="https://via.placeholder.com/600x400?text=Imagen+de+Odontología" alt="Imagen de odontología" />
+
+    <h2>Sección Principal</h2>
+    <p>Bienvenido a nuestro sitio web de odontología especializada. Ofrecemos una variedad de servicios para cuidar tu salud bucal.</p>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    &copy; 2024 Odontología Especializada
+  </footer>
+
+</body>
+</html>
